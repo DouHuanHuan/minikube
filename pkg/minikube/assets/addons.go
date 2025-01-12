@@ -136,7 +136,7 @@ var Addons = map[string]*Addon{
 
 		// GuestPersistentDir
 	}, false, "auto-pause", "minikube", "", "", map[string]string{
-		"AutoPauseHook": "k8s-minikube/auto-pause-hook:v0.0.5@sha256:d613ed2c891882b602b5aca668e92d4606a1b3832d96750ab25804de15929522",
+		"AutoPauseHook": "k8s-minikube/auto-pause-hook:v0.0.5",
 	}, map[string]string{
 		"AutoPauseHook": "gcr.io",
 	}),
@@ -153,8 +153,8 @@ var Addons = map[string]*Addon{
 		MustBinAsset(addons.DashboardAssets, "dashboard/dashboard-secret.yaml", vmpath.GuestAddonsDir, "dashboard-secret.yaml", "0640"),
 		MustBinAsset(addons.DashboardAssets, "dashboard/dashboard-svc.yaml", vmpath.GuestAddonsDir, "dashboard-svc.yaml", "0640"),
 	}, false, "dashboard", "Kubernetes", "", "https://minikube.sigs.k8s.io/docs/handbook/dashboard/", map[string]string{
-		"Dashboard":      "kubernetesui/dashboard:v2.7.0@sha256:2e500d29e9d5f4a086b908eb8dfe7ecac57d2ab09d65b24f588b1d449841ef93",
-		"MetricsScraper": "kubernetesui/metrics-scraper:v1.0.8@sha256:76049887f07a0476dc93efc2d3569b9529bf982b22d29f356092ce206e98765c",
+		"Dashboard":      "kubernetesui/dashboard:v2.7.0",
+		"MetricsScraper": "kubernetesui/metrics-scraper:v1.0.8",
 	}, map[string]string{
 		"Dashboard":      "docker.io",
 		"MetricsScraper": "docker.io",
