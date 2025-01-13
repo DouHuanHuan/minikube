@@ -277,15 +277,15 @@ var Addons = map[string]*Addon{
 			"0640"),
 	}, false, "ingress", "Kubernetes", "", "https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/", map[string]string{
 		// https://github.com/kubernetes/ingress-nginx/blob/3476232f5c38383dd157ddaff3b4c7cebd57284e/deploy/static/provider/kind/deploy.yaml#L445
-		"IngressController": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/registry.k8s.io/ingress-nginx/controller:v1.11.3-linuxarm64",
+		"IngressController": "registry.k8s.io/ingress-nginx/controller:v1.11.2",
 		// https://github.com/kubernetes/ingress-nginx/blob/3476232f5c38383dd157ddaff3b4c7cebd57284e/deploy/static/provider/kind/deploy.yaml#L552
-		"KubeWebhookCertgenCreate": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.4-linuxarm64",
+		"KubeWebhookCertgenCreate": "registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.0",
 		// https://github.com/kubernetes/ingress-nginx/blob/3476232f5c38383dd157ddaff3b4c7cebd57284e/deploy/static/provider/kind/deploy.yaml#L601
-		"KubeWebhookCertgenPatch": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.4-linuxarm64",
+		"KubeWebhookCertgenPatch": "registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.4.0",
 	}, map[string]string{
-		"IngressController":        "registry.k8s.io",
-		"KubeWebhookCertgenCreate": "registry.k8s.io",
-		"KubeWebhookCertgenPatch":  "registry.k8s.io",
+		"IngressController":        "swr.cn-north-4.myhuaweicloud.com/ddn-k8s",
+		"KubeWebhookCertgenCreate": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s",
+		"KubeWebhookCertgenPatch":  "swr.cn-north-4.myhuaweicloud.com/ddn-k8s",
 	}),
 	"istio-provisioner": NewAddon([]*BinAsset{
 		MustBinAsset(addons.IstioProvisionerAssets,
