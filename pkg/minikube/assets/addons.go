@@ -738,9 +738,9 @@ var Addons = map[string]*Addon{
 			"portainer.yaml",
 			"0640"),
 	}, false, "portainer", "3rd party (Portainer.io)", "", "", map[string]string{
-		"Portainer": "portainer/portainer-ce:2.15.1@sha256:5466af30b8eaf3f75edd3c74703d1c9973f0963acd6ef164913ea6f195d640c2",
+		"Portainer": "portainer/portainer-ce:2.15.1",
 	}, map[string]string{
-		"Portainer": "docker.io",
+		"Portainer": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s",
 	}),
 	"inaccel": NewAddon([]*BinAsset{
 		MustBinAsset(addons.InAccelAssets,
