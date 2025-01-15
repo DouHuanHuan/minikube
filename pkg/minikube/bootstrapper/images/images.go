@@ -177,7 +177,7 @@ func storageProvisioner(mirror string) string {
 // src: https://github.com/kubernetes-sigs/kind/tree/master/images/kindnetd
 func KindNet(repo string) string {
 	if repo == "" {
-		repo = "docker.io/kindest"
+		repo = "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/kindest"
 	}
 	return path.Join(repo, "kindnetd:v20241108-5c6d2daf")
 }
