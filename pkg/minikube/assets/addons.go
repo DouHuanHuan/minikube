@@ -153,11 +153,11 @@ var Addons = map[string]*Addon{
 		MustBinAsset(addons.DashboardAssets, "dashboard/dashboard-secret.yaml", vmpath.GuestAddonsDir, "dashboard-secret.yaml", "0640"),
 		MustBinAsset(addons.DashboardAssets, "dashboard/dashboard-svc.yaml", vmpath.GuestAddonsDir, "dashboard-svc.yaml", "0640"),
 	}, false, "dashboard", "Kubernetes", "", "https://minikube.sigs.k8s.io/docs/handbook/dashboard/", map[string]string{
-		"Dashboard":      "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/kubernetesui/dashboard:v2.7.0",
-		"MetricsScraper": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/kubernetesui/metrics-scraper:v1.0.8",
+		"Dashboard":      "kubernetesui/dashboard:v2.7.0",
+		"MetricsScraper": "kubernetesui/metrics-scraper:v1.0.8",
 	}, map[string]string{
-		"Dashboard":      "docker.io",
-		"MetricsScraper": "docker.io",
+		"Dashboard":      "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io",
+		"MetricsScraper": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io",
 	}),
 	"default-storageclass": NewAddon([]*BinAsset{
 		MustBinAsset(addons.DefaultStorageClassAssets,
@@ -206,9 +206,9 @@ var Addons = map[string]*Addon{
 			"storage-provisioner-glusterfile.yaml",
 			"0640"),
 	}, false, "storage-provisioner-gluster", "3rd party (Gluster)", "", "", map[string]string{
-		"Heketi":                 "heketi/heketi:10@sha256:76d5a6a3b7cf083d1e99efa1c15abedbc5c8b73bef3ade299ce9a4c16c9660f8",
-		"GlusterfileProvisioner": "gluster/glusterfile-provisioner:latest@sha256:9961a35cb3f06701958e202324141c30024b195579e5eb1704599659ddea5223",
-		"GlusterfsServer":        "gluster/gluster-centos:latest@sha256:8167034b9abf2d16581f3f4571507ce7d716fb58b927d7627ef72264f802e908",
+		"Heketi":                 "heketi/heketi:10",
+		"GlusterfileProvisioner": "gluster/glusterfile-provisioner:latest",
+		"GlusterfsServer":        "gluster/gluster-centos:latest",
 	}, map[string]string{
 		"Heketi":                 "docker.io",
 		"GlusterfsServer":        "docker.io",
