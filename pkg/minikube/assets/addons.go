@@ -182,7 +182,7 @@ var Addons = map[string]*Addon{
 	}, true, "storage-provisioner", "minikube", "", "", map[string]string{
 		"StorageProvisioner": fmt.Sprintf("k8s-minikube/storage-provisioner:%s", version.GetStorageProvisionerVersion()),
 	}, map[string]string{
-		"StorageProvisioner": "gcr.io",
+		"StorageProvisioner": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/gcr.io",
 	}),
 	"storage-provisioner-gluster": NewAddon([]*BinAsset{
 		MustBinAsset(addons.StorageProvisionerGlusterAssets,
