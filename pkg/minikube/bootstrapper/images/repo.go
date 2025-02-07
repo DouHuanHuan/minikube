@@ -17,7 +17,7 @@ limitations under the License.
 package images
 
 // DefaultKubernetesRepo is the default Kubernetes repository
-const DefaultKubernetesRepo = "registry.k8s.io"
+const DefaultKubernetesRepo = "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/registry.k8s.io"
 
 // kubernetesRepo returns the official Kubernetes repository, or an alternate
 func kubernetesRepo(mirror string) string {
