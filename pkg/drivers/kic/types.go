@@ -35,6 +35,7 @@ const (
 )
 
 var (
+	// TODO dockerhub 和 grp.io 共用同一 BaseImage，该 BaseImage 含有 sha256 哈希戳， 第三方仓库不支持该镜像拉取名称
 	// BaseImage is the base image is used to spin up kic containers. it uses same base-image as kind.
 	BaseImage = fmt.Sprintf("%s:%s@sha256:%s", gcrRepo, Version, baseImageSHA)
 
