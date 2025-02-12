@@ -42,7 +42,7 @@ var (
 	FallbackImages = []string{
 		// the fallback of BaseImage in case gcr.io is not available. stored in docker hub
 		// same image is push to https://github.com/kicbase/stable
-		fmt.Sprintf("%s:%s@sha256:%s", dockerhubRepo, Version, baseImageSHA),
+		fmt.Sprintf("%s:%s", gcrRepo, Version),
 		// try without sha because #11068
 		fmt.Sprintf("%s:%s", gcrRepo, Version),
 		fmt.Sprintf("%s:%s", dockerhubRepo, Version),
