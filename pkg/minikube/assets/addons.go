@@ -321,11 +321,11 @@ var Addons = map[string]*Addon{
 			"kong-ingress-controller.yaml",
 			"0640"),
 	}, false, "kong", "3rd party (Kong HQ)", "@gAmUssA", "https://minikube.sigs.k8s.io/docs/handbook/addons/kong-ingress/", map[string]string{
-		"Kong":        "kong:3.8.0@sha256:616b2ab5a4c7b6c14022e8a1495ff34930ced76f25f3d418e76758717fec335f",
-		"KongIngress": "kong/kubernetes-ingress-controller:3.3.1@sha256:9211b2e6c10fc899ad85c77d02eed5ff5c9ec0ca6b4accdfb82679cdba196662",
+		"Kong":        "kong:3.8.0",
+		"KongIngress": "kong/kubernetes-ingress-controller:3.3.1",
 	}, map[string]string{
-		"Kong":        "docker.io",
-		"KongIngress": "docker.io",
+		"Kong":        "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io",
+		"KongIngress": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io",
 	}),
 	"kubevirt": NewAddon([]*BinAsset{
 		MustBinAsset(addons.KubevirtAssets,
@@ -334,9 +334,9 @@ var Addons = map[string]*Addon{
 			"pod.yaml",
 			"0640"),
 	}, false, "kubevirt", "3rd party (KubeVirt)", "", "https://minikube.sigs.k8s.io/docs/handbook/addons/kubevirt/", map[string]string{
-		"Kubectl": "bitnami/kubectl:1.31.3@sha256:3e89d1d1dbd10b1809bde3436bbe9f3708ad4c7d3ad4a9551cd8a16d88400365",
+		"Kubectl": "bitnami/kubectl:1.31.3",
 	}, map[string]string{
-		"Kubectl": "docker.io",
+		"Kubectl": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io",
 	}),
 	"metrics-server": NewAddon([]*BinAsset{
 		MustBinAsset(addons.MetricsServerAssets,
@@ -360,9 +360,9 @@ var Addons = map[string]*Addon{
 			"metrics-server-service.yaml",
 			"0640"),
 	}, false, "metrics-server", "Kubernetes", "", "", map[string]string{
-		"MetricsServer": "metrics-server/metrics-server:v0.7.2@sha256:ffcb2bf004d6aa0a17d90e0247cf94f2865c8901dcab4427034c341951c239f9",
+		"MetricsServer": "metrics-server/metrics-server:v0.7.2",
 	}, map[string]string{
-		"MetricsServer": "registry.k8s.io",
+		"MetricsServer": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/registry.k8s.io",
 	}),
 	"olm": NewAddon([]*BinAsset{
 		MustBinAsset(addons.OlmAssets,
@@ -376,12 +376,12 @@ var Addons = map[string]*Addon{
 			"olm.yaml",
 			"0640"),
 	}, false, "olm", "3rd party (Operator Framework)", "", "", map[string]string{
-		"OLM": "operator-framework/olm@sha256:e74b2ac57963c7f3ba19122a8c31c9f2a0deb3c0c5cac9e5323ccffd0ca198ed",
+		"OLM": "operator-framework/olm:latest",
 		// operator-framework/community-operators was deprecated: https://github.com/operator-framework/community-operators#repository-is-obsolete; switching to OperatorHub.io instead
-		"UpstreamCommunityOperators": "operatorhubio/catalog@sha256:e08a1cd21fe72dd1be92be738b4bf1515298206dac5479c17a4b3ed119e30bd4",
+		"UpstreamCommunityOperators": "operatorhubio/catalog",
 	}, map[string]string{
-		"OLM":                        "quay.io",
-		"UpstreamCommunityOperators": "quay.io",
+		"OLM":                        "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/quay.io",
+		"UpstreamCommunityOperators": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/quay.io",
 	}),
 	"registry": NewAddon([]*BinAsset{
 		MustBinAsset(addons.RegistryAssets,
@@ -400,11 +400,11 @@ var Addons = map[string]*Addon{
 			"registry-proxy.yaml",
 			"0640"),
 	}, false, "registry", "minikube", "", "", map[string]string{
-		"KubeRegistryProxy": "k8s-minikube/kube-registry-proxy:0.0.8@sha256:60ab3508367ad093b4b891231572577371a29f838d61e64d7f7d093d961c862c",
-		"Registry":          "registry:2.8.3@sha256:543dade69668e02e5768d7ea2b0aa4fae6aa7384c9a5a8dbecc2be5136079ddb",
+		"KubeRegistryProxy": "k8s-minikube/kube-registry-proxy:0.0.8",
+		"Registry":          "registry:2.8.3",
 	}, map[string]string{
-		"KubeRegistryProxy": "gcr.io",
-		"Registry":          "docker.io",
+		"KubeRegistryProxy": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/gcr.io",
+		"Registry":          "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io",
 	}),
 	"registry-creds": NewAddon([]*BinAsset{
 		MustBinAsset(addons.RegistryCredsAssets,
