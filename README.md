@@ -68,6 +68,12 @@ minikube start --ha=true
 minikube dashboard
 ```
 
+开启 efk addon
+
+```shell
+minikube addons enable efk
+```
+
 ## 官方文档连接
 
 https://minikube.sigs.k8s.io/docs/
