@@ -259,15 +259,15 @@ var Addons = map[string]*Addon{
 			"kibana-svc.yaml",
 			"0640"),
 	}, false, "efk", "3rd party (Elastic)", "", "", map[string]string{
-		"Elasticsearch":        "elasticsearch:v5.6.2@sha256:7e95b32a7a2aad0c0db5c881e4a1ce8b7e53236144ae9d9cfb5fbe5608af4ab2",
-		"FluentdElasticsearch": "fluentd-elasticsearch:v2.0.2@sha256:d0480bbf2d0de2344036fa3f7034cf7b4b98025a89c71d7f1f1845ac0e7d5a97",
-		"Alpine":               "alpine:3.6@sha256:66790a2b79e1ea3e1dabac43990c54aca5d1ddf268d9a5a0285e4167c8b24475",
-		"Kibana":               "kibana/kibana:5.6.2@sha256:cd948a9bda4622f1437afc4a3e78be6c8c25fc62f40aa0376f3d690f2436568f",
+		"Elasticsearch":        "elasticsearch:v5.6.2",
+		"FluentdElasticsearch": "fluentd-elasticsearch:v2.0.2",
+		"Alpine":               "alpine:3.6",
+		"Kibana":               "kibana/kibana:5.6.2",
 	}, map[string]string{
-		"Elasticsearch":        "registry.k8s.io",
-		"FluentdElasticsearch": "registry.k8s.io",
-		"Kibana":               "docker.elastic.co",
-		"Alpine":               "docker.io",
+		"Elasticsearch":        "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/registry.k8s.io",
+		"FluentdElasticsearch": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/registry.k8s.io",
+		"Kibana":               "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.elastic.co",
+		"Alpine":               "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io",
 	}),
 	"ingress": NewAddon([]*BinAsset{
 		MustBinAsset(addons.IngressAssets,
@@ -470,8 +470,9 @@ var Addons = map[string]*Addon{
 			"nvidia-driver-installer.yaml",
 			"0640"),
 	}, false, "nvidia-driver-installer", "3rd party (NVIDIA)", "", "https://minikube.sigs.k8s.io/docs/tutorials/nvidia/", map[string]string{
+		// 使用非官方镜像
 		"NvidiaDriverInstaller": "minikube-nvidia-driver-installer:e2d9b43228decf5d6f7dce3f0a85d390f138fa01",
-		"Pause":                 "pause:2.0@sha256:9ce5316f9752b8347484ab0f6778573af15524124d52b93230b9a0dcc987e73e",
+		"Pause":                 "pause:2.0",
 	}, map[string]string{
 		"NvidiaDriverInstaller": "registry.k8s.io",
 		"Pause":                 "registry.k8s.io",
