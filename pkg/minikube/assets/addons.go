@@ -474,8 +474,8 @@ var Addons = map[string]*Addon{
 		"NvidiaDriverInstaller": "minikube-nvidia-driver-installer:e2d9b43228decf5d6f7dce3f0a85d390f138fa01",
 		"Pause":                 "pause:2.0",
 	}, map[string]string{
-		"NvidiaDriverInstaller": "registry.k8s.io",
-		"Pause":                 "registry.k8s.io",
+		"NvidiaDriverInstaller": "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/registry.k8s.io",
+		"Pause":                 "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/registry.k8s.io",
 	}),
 	"nvidia-gpu-device-plugin": NewAddon([]*BinAsset{
 		MustBinAsset(addons.NvidiaGpuDevicePluginAssets,
